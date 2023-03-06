@@ -5,16 +5,28 @@ import reportWebVitals from "./reportWebVitals";
 import "./assets/boxicons-2.0.7/css/boxicons.min.css";
 import "./assets/css/grid.css";
 import "./assets/css/index.css";
+import "./assets/css/theme.css";
+
+import { createStore } from 'redux'
+
+import { Provider } from "react-redux";
+
+import rootReducer from "./redux/reducers";
 
 import Layout from "./components/layout/Layout";
+
+const store = createStore(rootReducer)
 
 document.title = "Admin";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <Provider store={store}>
+
   <React.StrictMode>
     <Layout />
   </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

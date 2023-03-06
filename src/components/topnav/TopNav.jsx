@@ -10,6 +10,8 @@ import user_image from "../../assets/images/ems.png";
 
 import user_menu from "../../assets/JsonData/user_menus.json";
 
+import ThemeMenu from "../theme-menu/ThemeMenu";
+
 const curr_user = {
   display_name: "Quoc Quan",
   image: user_image,
@@ -69,7 +71,7 @@ const TopNav = () => {
           />
         </div>
         <div className="topnav__right-item">
-          <DropDown />
+          <ThemeMenu />
         </div>
       </div>
     </div>
